@@ -2350,6 +2350,16 @@ Checkout Page
   animation: fade-in 0.4s;
 }
 
+.basket-count {
+  position: absolute;
+ top: 0;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
 .edit{
   cursor: pointer;
 }

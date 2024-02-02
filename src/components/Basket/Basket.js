@@ -19,7 +19,7 @@ const Basket = (props) => {
     }, [basket]);
 
     return (
-        <div style={{ position: "absolute", width: "60%", marginLeft: "-40%", display: view, minWidth: "400px" }} className="checkout-items basket">
+        <div style={{ position: "absolute", width: "60%", marginLeft: "-40%", display: view, minWidth: "400px"}} className="checkout-items basket">
             <nav style={{ display: "flex", justifyContent: "left", alignItems: "center", padding: "5px" }}>
                 <h6 style={{ marginLeft: "5%" }}>{basket ? basket.length : 0} {basket && basket.length === 1 ? "Item" : "Items"}</h6>
             </nav>
