@@ -1,17 +1,17 @@
-Tech Stack:
+# Tech Stack:
 
-React
+-React
 
-Node
+-Node
 
-Express
+-Express
 
-Redis
+-Redis
 
-Bootstrap
+-Bootstrap
 
-Postgresql
+-Postgresql
 
-knex.js
+-knex.js
 
-bcrypt
+-bcrypt
