@@ -7,6 +7,7 @@ import Footer from "../../components/Footer/Footer";
 const RegisterPage = (props) => {
 
     const {changeQuantity, changePage, page, changeUser, signIn, basket, prevPage, removeFromBasket} = props;
+    
     const [register, setRegister] = useState({
         first_name: '',
         last_name: '',
@@ -14,7 +15,6 @@ const RegisterPage = (props) => {
         username: '',
         password: ''
     })
-
     const [error, setError] = useState("")
 
     const changeFirstName = (event) => {
@@ -59,7 +59,6 @@ const RegisterPage = (props) => {
         console.log(event.target.value)
 
     }
-
 
     const handleRegister = () => {
         fetch("http://localhost:3000/register" , {

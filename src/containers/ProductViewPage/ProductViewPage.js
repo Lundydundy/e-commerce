@@ -9,6 +9,7 @@ const ProductViewPage = ({changeQuantity, changeUser, product, changePage, page,
 
     const [quantity, setQuantity] = React.useState(1);
     const [details, setDetails] = React.useState("");
+    
     const handleClick = (setting) => {
         setting === "add" ? setQuantity(quantity + 1) : (quantity > 0 ? setQuantity(quantity - 1) : setQuantity(0));
     }
@@ -17,6 +18,7 @@ const ProductViewPage = ({changeQuantity, changeUser, product, changePage, page,
         console.log(e.target.value);
         setDetails(e.target.value);
     }
+    
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -36,7 +38,6 @@ const ProductViewPage = ({changeQuantity, changeUser, product, changePage, page,
             items: 1
         }
     };
-
 
     return (
         <div>

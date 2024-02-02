@@ -10,8 +10,6 @@ const ProductsPage = (props) => {
 
     const {changeQuantity, changeProduct, changePage, page, signIn, user, basket, changeUser, removeFromBasket, products, handleLogOut } = props;
    
-    
-
     return (
         <div className="products-page">
             <Navigation changeQuantity={changeQuantity} removeFromBasket={removeFromBasket} basket={basket} signIn={signIn} changePage={changePage} page={page} user={user} changeUser={changeUser} handleLogOut={handleLogOut} />

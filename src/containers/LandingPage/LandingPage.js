@@ -31,7 +31,6 @@ const LandingPage = (props) => {
       )
     }, [])
 
-    
     return(
         <div>
             <Navigation changeQuantity={changeQuantity} removeFromBasket={removeFromBasket} basket={basket} signIn={signIn} changePage={changePage} page={page} changeUser={changeUser} handleLogOut={handleLogOut} user={user}/>

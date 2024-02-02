@@ -32,7 +32,7 @@ const Navigation = (props) => {
         window.addEventListener("resize", handleResize)
     }, [])
 
-    console.log(user, windowWidth, scrollHeight)
+    // console.log(user, windowWidth, scrollHeight)
     return (
         <header style={scrollHeight > 100 && scrollHeight < 700 ? { opacity: "0" } : { opacity: "100%" }} className={scrollHeight > 700 && (page === "landing" || page === "products" || page === "productsA" || page === "productsM" || page === "productsW" || page === "productsS") ? "header-area header-sticky fixed fade-in" : "header-area header-sticky"}>
             <div className="container">

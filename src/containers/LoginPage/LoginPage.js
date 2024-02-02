@@ -13,7 +13,6 @@ const LoginPage = (props) => {
         password: ''
     })
 
-
     const changeEmail = (event) => {
         setLogin({
             ...login,

@@ -14,6 +14,7 @@ const CheckoutPage = (props) => {
     const changeDelivery = (delivery) => {
         setDelivery(delivery);
     }
+    
     return (
         <div className="checkout-page">
             <CheckoutNav changePage={changePage}/>

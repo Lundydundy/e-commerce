@@ -76,9 +76,6 @@ function App() {
     }
   }
 
-
-  
-
   const changePage = async (newPage) => {
     setPrevPage(page)
    
@@ -296,11 +293,6 @@ function App() {
   .then((res) => res.json())
   }
 
-
-  console.log("products:", products)
-  console.log("product:", product)
- 
-
   useEffect(() => {
     console.log("Component is mounting");
     checkAuth();
@@ -356,7 +348,6 @@ function App() {
 
       </div>
     )
-
   }
 }
 

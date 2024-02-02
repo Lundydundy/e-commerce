@@ -6,6 +6,7 @@ import "../../../static/css/templatemo-hexashop.css"
 const Items = (props) => {
     const { basket, delivery, removeFromBasket, changeQuantity } = props;
     const [totalPrice, setTotalPrice] = React.useState(0);
+    
     useEffect(() => {
 
         if (basket.length) {
@@ -17,6 +18,7 @@ const Items = (props) => {
         
         }
     }, [basket]);
+    
     return (
         <div className="checkout-items">
             <nav>

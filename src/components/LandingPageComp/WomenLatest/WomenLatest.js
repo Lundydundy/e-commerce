@@ -1,11 +1,6 @@
 import React from "react";
 import "../../../static/css/bootstrap.min.css"
 import "../../../static/css/templatemo-hexashop.css"
-import women1 from "../../../static/images/women-01.jpg"
-import women2 from "../../../static/images/women-02.jpg"
-import women3 from "../../../static/images/women-03.jpg"
-import women4 from "../../../static/images/women-04.jpg"
-
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import "tachyons";
