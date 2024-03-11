@@ -66,7 +66,7 @@ app.use(session({
 
 app.use(
     cors({
-        origin: 'http://localhost:3001', // Replace with your React app's origin
+        origin: 'https://e-commerce-1-nxh1.onrender.com/', // Replace with your React app's origin
         credentials: true,
     })
 );
