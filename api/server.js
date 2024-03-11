@@ -34,9 +34,7 @@ const db = knex({
 const RedisStore = connectRedis(session);
 
 const redisClient = redis.createClient({
-    port: 6379,
     url: process.env.REDIS_URL,
-    legacyMode: true
 }
 )
 
