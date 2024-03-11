@@ -66,7 +66,7 @@ app.use(session({
 
 app.use(
     cors({
-        origin: "https://e-commerce-1-nxh1.onrender.com/",
+        origin: "https://e-commerce-1-nxh1.onrender.com",
         credentials: true
     })
 );
