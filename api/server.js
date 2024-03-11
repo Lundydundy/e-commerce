@@ -141,7 +141,8 @@ app.post("/register", (req, res) => {
             .then(trx.commit)
             .catch(err => {
                 trx.rollback();
-                res.status(500).json(err, "Internal Server Error Register");
+                console.log(err)
+                res.status(500).json("Internal Server Error Register");
             });
     });
 });
