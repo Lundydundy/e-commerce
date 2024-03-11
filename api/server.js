@@ -65,7 +65,10 @@ app.use(session({
 
 
 app.use(
-    cors()
+    cors({
+        origin: "https://e-commerce-1-nxh1.onrender.com/",
+        credentials: true
+    })
 );
 
 app.use(express.urlencoded({ extended: false }));
