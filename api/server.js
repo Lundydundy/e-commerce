@@ -22,7 +22,7 @@ const RedisStore = connectRedis(session);
 
 const redisClient = redis.createClient({
     port: 6379,
-    host: 'localhost',
+    host: 'redis://red-cnnl9sud3nmc73a8sm5g:6379',
     legacyMode: true
 }
 )
@@ -32,7 +32,6 @@ const connection = async () => {
 }
 
 connection()
-
 
 process.on('unhandledRejection', (reason, promise) => {
     console.error('Unhandled Rejection at:', reason.stack || reason);
@@ -175,7 +174,7 @@ app.post("/login", (req, res) => {
                                     console.log(req.session)
                                     res.json({ user: response })
                                 })
-                        } else{
+                        } else {
 
                             console.log(req.session)
                             console.log("logged in")
@@ -213,7 +212,7 @@ app.post("/addbasket", (req, res) => {
     if (user.id === null) {
         console.log("no user")
         res.json("no user")
-    } else if(req.session.user) {
+    } else if (req.session.user) {
         db('users')
             .where('id', req.session.user.id)
             .update({
@@ -423,18 +422,18 @@ app.get('/auth', (req, res) => {
                             console.log(req.session)
                             res.json({ user: response })
                         })
-                } else{
+                } else {
 
                     console.log(req.session)
                     console.log("logged in")
                     res.json({ user: user })
                 }
-            })}
-            else{
-                res.json("no session")
-            }
+            })
+    }
+    else {
+        res.json("no session")
+    }
 })
-
 
 function titleCase(string) {
     return string[0].toUpperCase() + string.slice(1).toLowerCase();

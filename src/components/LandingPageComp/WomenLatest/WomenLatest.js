@@ -26,7 +26,6 @@ const responsive = {
     }
 };
 
-
 const WomenLatest = (props) => {
 
     const { products, changeProduct } = props;
