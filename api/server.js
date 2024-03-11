@@ -220,6 +220,7 @@ app.post('/logout', (req, res) => {
 
 app.post("/addbasket", (req, res) => {
     const { user, basket } = req.body;
+    console.log(req.session)
     console.log("user", user)
     if (user.id === null) {
         console.log("no user")

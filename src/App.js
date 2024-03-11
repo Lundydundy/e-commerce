@@ -218,6 +218,7 @@ function App() {
         console.log("user_id",user.id)
         const updatedBasket = [...prevBasket, basketItem];        
         console.log("Item not in Basket. Adding to Basket.");
+        
         fetch(`https://e-commerce-q5ug.onrender.com/addbasket`, {
           method: "POST",
           headers: {
