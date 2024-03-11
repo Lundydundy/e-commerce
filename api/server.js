@@ -35,7 +35,7 @@ const RedisStore = connectRedis(session);
 
 const redisClient = redis.createClient({
     port: 6379,
-    host: "redis://red-cnnl9sud3nmc73a8sm5g:6379",
+    host: "red-cnnl9sud3nmc73a8sm5g:6379",
     legacyMode: true
 }
 )
