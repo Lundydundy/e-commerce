@@ -165,6 +165,7 @@ app.post("/login", (req, res) => {
                         console.log("data", data[0])
                         const user = data[0]
                         req.session.user = user
+                        console.log("login user", req.session.user)
                         if (user.basket.length > 0) {
                             const basketItems = user.basket
                             console.log("basketItems", basketItems)
@@ -220,8 +221,8 @@ app.post('/logout', (req, res) => {
 
 app.post("/addbasket", (req, res) => {
     const { user, basket } = req.body;
-    console.log(req.session)
-    console.log("user", user)
+    console.log("session req", req.session)
+    console.log("user", user, "basket", basket)
     if (user.id === null) {
         console.log("no user")
         res.json("no user")
