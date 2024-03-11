@@ -65,10 +65,7 @@ app.use(session({
 
 
 app.use(
-    cors({
-        origin: 'https://e-commerce-1-nxh1.onrender.com/', // Replace with your React app's origin
-        credentials: true,
-    })
+    cors()
 );
 
 app.use(express.urlencoded({ extended: false }));
