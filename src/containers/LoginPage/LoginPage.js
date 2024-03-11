@@ -32,7 +32,7 @@ const LoginPage = (props) => {
     }
 
     const handleLogin = async() => {
-        fetch("https://e-commerce-1-nxh1.onrender.com/login", {
+        fetch("https://e-commerce-q5ug.onrender.com/login", {
             method: 'post',
             headers: {
                 'Content-Type': 'application/json'

@@ -61,7 +61,7 @@ const RegisterPage = (props) => {
     }
 
     const handleRegister = () => {
-        fetch("https://e-commerce-1-nxh1.onrender.com/register" , {
+        fetch("https://e-commerce-q5ug.onrender.com/register" , {
             method: 'post',
             headers: {
                 'Content-Type' : 'application/json'
@@ -85,7 +85,7 @@ const RegisterPage = (props) => {
                 changePage("landing");
 
                 if(basket.length > 0) {
-                    fetch("http://localhost:3000/addbasket", {
+                    fetch("https://e-commerce-q5ug.onrender.com/addbasket", {
                         method: 'post',
                         headers: {
                             'Content-Type' : 'application/json'
