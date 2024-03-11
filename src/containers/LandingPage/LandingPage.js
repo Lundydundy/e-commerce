@@ -17,7 +17,7 @@ const LandingPage = (props) => {
 
 
     useEffect(() =>{
-      fetch('http://localhost:3000/', {
+      fetch('https://e-commerce-1-nxh1.onrender.com/', {
         method: 'get',
         credentials: 'include', 
       })

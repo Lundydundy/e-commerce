@@ -52,7 +52,7 @@ function App() {
   const checkAuth = async () => {
     try {
       console.log("fetching")
-      const response = await fetch('http://localhost:3000/auth', {
+      const response = await fetch('https://e-commerce-1-nxh1.onrender.com/auth', {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -80,7 +80,7 @@ function App() {
     setPrevPage(page)
    
     if (newPage === "productsW" || newPage === "productsM" || newPage === "productsA" || newPage === "productsS" || newPage === "products") {
-      fetch(`http://localhost:3000/products`, {
+      fetch(`https://e-commerce-1-nxh1.onrender.com//products`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -128,7 +128,7 @@ function App() {
   const handleLogOut = async() => {
    
       try {
-        const response = await fetch('http://localhost:3000/logout', {
+        const response = await fetch('https://e-commerce-1-nxh1.onrender.com/logout', {
           method: 'POST',
           credentials: 'include', // Include credentials (cookies)
           headers: {
@@ -158,7 +158,7 @@ function App() {
   }
 
   const changeProduct = (newProduct, page) => {
-    fetch(`http://localhost:3000/product/${newProduct}`, {
+    fetch(`https://e-commerce-1-nxh1.onrender.com/product/${newProduct}`, {
       method: 'get',
       credentials: 'include', 
     })
@@ -200,7 +200,7 @@ function App() {
         updatedBasket[existingItemIndex].quantity += parsedQuantity;
         console.log("Existing Item Quantity After Update:", updatedBasket[existingItemIndex].quantity);
         
-        fetch(`http://localhost:3000/addbasket`, {
+        fetch(`https://e-commerce-1-nxh1.onrender.com/addbasket`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -218,7 +218,7 @@ function App() {
         console.log("user_id",user.id)
         const updatedBasket = [...prevBasket, basketItem];        
         console.log("Item not in Basket. Adding to Basket.");
-        fetch(`http://localhost:3000/addbasket`, {
+        fetch(`https://e-commerce-1-nxh1.onrender.com/addbasket`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -239,7 +239,7 @@ function App() {
   const removeFromBasket = (id) => {
     const updatedBasket = basket.filter((item) => item.id !== id);
     setBasket(updatedBasket)
-    fetch(`http://localhost:3000/addbasket`, {
+    fetch(`https://e-commerce-1-nxh1.onrender.com/addbasket`, {
       method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -276,7 +276,7 @@ function App() {
       }
     })
     setBasket(updatedBasket)
-    fetch(`http://localhost:3000/addbasket`, {
+    fetch(`https://e-commerce-1-nxh1.onrender.com/addbasket`, {
       method: "POST",
           headers: {
             "Content-Type": "application/json",
