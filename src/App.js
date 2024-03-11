@@ -80,7 +80,7 @@ function App() {
     setPrevPage(page)
    
     if (newPage === "productsW" || newPage === "productsM" || newPage === "productsA" || newPage === "productsS" || newPage === "products") {
-      fetch(`https://e-commerce-1-nxh1.onrender.com//products`, {
+      fetch(`https://e-commerce-1-nxh1.onrender.com/products`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

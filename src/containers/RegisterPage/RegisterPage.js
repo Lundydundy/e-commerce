@@ -61,7 +61,7 @@ const RegisterPage = (props) => {
     }
 
     const handleRegister = () => {
-        fetch("http://localhost:3000/register" , {
+        fetch("https://e-commerce-1-nxh1.onrender.com/register" , {
             method: 'post',
             headers: {
                 'Content-Type' : 'application/json'
