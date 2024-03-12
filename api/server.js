@@ -17,6 +17,12 @@ const app = express()
 //         database: 'shop'
 //     }
 // });
+app.use(
+    cors({
+        origin: "https://e-commerce-1-nxh1.onrender.com",
+        credentials: true
+    })
+);
 
 const db = knex({
     client: 'pg',
@@ -63,12 +69,6 @@ app.use(session({
 }))
 
 
-app.use(
-    cors({
-        origin: "https://e-commerce-1-nxh1.onrender.com",
-        credentials: true
-    })
-);
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
