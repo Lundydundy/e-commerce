@@ -58,8 +58,8 @@ app.use(session({
     saveUninitialized: false,
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 5, // 5 days
-        secure: true,
-        httpOnly: true,
+        secure: false,
+        httpOnly: false,
         domain: "e-commerce-1-nxh1.onrender.com",
         path: "/"
     }
