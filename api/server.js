@@ -224,6 +224,7 @@ app.post("/addbasket", (req, res) => {
     const { user, basket } = req.body;
     console.log("session req", req.session)
     console.log("user", user, "basket", basket)
+    console.log(req.session.user)
     if (user.id === null) {
         console.log("no user")
         res.json("no user")
