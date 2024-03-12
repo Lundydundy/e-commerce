@@ -53,6 +53,8 @@ function App() {
       console.log("fetching")
       const response = await fetch('https://e-commerce-q5ug.onrender.com/auth', {
         method: "GET",
+        mode: "cors",
+
         headers: {
           "Content-Type": "application/json",
         },
@@ -82,6 +84,8 @@ function App() {
       fetch(`https://e-commerce-q5ug.onrender.com/products`, {
         method: "POST",
         credentials: 'include',
+        mode: "cors",
+
         headers: {
           "Content-Type": "application/json",
         },
@@ -130,6 +134,7 @@ function App() {
       try {
         const response = await fetch('https://e-commerce-q5ug.onrender.com/logout', {
           method: 'POST',
+          mode: "cors",
           credentials: 'include', // Include credentials (cookies)
           headers: {
             'Content-Type': 'application/json',
@@ -161,6 +166,8 @@ function App() {
     fetch(`https://e-commerce-q5ug.onrender.com/product/${newProduct}`, {
       method: 'get',
       credentials: 'include', 
+      mode: "cors",
+
     })
       .then((res) => res.json())
       .then((data) => {
@@ -202,6 +209,8 @@ function App() {
         
         fetch(`https://e-commerce-q5ug.onrender.com/addbasket`, {
           method: "POST",
+          mode: "cors",
+
           credentials: 'include',
           headers: {
             "Content-Type": "application/json",
@@ -222,6 +231,8 @@ function App() {
         
         fetch(`https://e-commerce-q5ug.onrender.com/addbasket`, {
           method: "POST",
+          mode: "cors",
+
           credentials: 'include',
           headers: {
             "Content-Type": "application/json",
@@ -245,6 +256,8 @@ function App() {
     fetch(`https://e-commerce-q5ug.onrender.com/addbasket`, {
       method: "POST",
       credentials: 'include',
+      mode: "cors",
+
           headers: {
             "Content-Type": "application/json",
           },
@@ -283,6 +296,8 @@ function App() {
     fetch(`https://e-commerce-q5ug.onrender.com/addbasket`, {
       method: "POST",
       credentials: 'include',
+      mode: "cors",
+
           headers: {
             "Content-Type": "application/json",
           },
