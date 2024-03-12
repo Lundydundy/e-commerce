@@ -51,6 +51,8 @@ process.on('unhandledRejection', (reason, promise) => {
     console.error('Unhandled Rejection at:', reason.stack || reason);
 });
 
+app.use(cookieParser());
+
 app.use(session({
     store: new RedisStore({ client: redisClient }),
     secret: "secret",
@@ -68,7 +70,7 @@ app.use(session({
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(cookieParser());
+
 
 
 app.use((req, res, next) => {
