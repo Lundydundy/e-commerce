@@ -5,6 +5,7 @@ const session = require('express-session');
 const bcrypt = require('bcrypt')
 const redis = require('redis')
 const connectRedis = require('connect-redis');
+const cookieParser = require('cookie-parser')
 
 const app = express()
 
@@ -66,7 +67,7 @@ app.use(session({
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(express.cookieParser());
+app.use(cookieParser());
 
 
 app.use((req, res, next) => {
