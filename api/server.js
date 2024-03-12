@@ -63,9 +63,6 @@ app.use(session({
         maxAge: 1000 * 60 * 60 * 24 * 5, // 5 days
         secure: true,
         httpOnly: false,
-        domain: 'e-commerce-q5ug.onrender.com',
-        path: "/",
-        sameSite: "none"
     }
 
 }))
