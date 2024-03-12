@@ -56,7 +56,7 @@ app.use(session({
     resave: true,
     saveUninitialized: false,
     cookie: {
-        maxAge: 1000 * 60 * 60 * 24, // 30 days
+        maxAge: 1000 * 60 * 60 * 24, // 1 day
         secure: false,
         httpOnly: false
     }
@@ -244,6 +244,7 @@ app.post("/addbasket", (req, res) => {
                 res.status(500).json('Internal Server Error /addbasket');
             });
     }
+    console.log("not working properly")
 })
 
 app.post("/product", (req, res) => {
