@@ -6,7 +6,6 @@ import LoginPage from './containers/LoginPage/LoginPage';
 import ProductViewPage from './containers/ProductViewPage/ProductViewPage';
 import ProductsPage from './containers/ProductsPage/ProductsPage';
 import RegisterPage from './containers/RegisterPage/RegisterPage';
-import { Routes, Route, BrowserRouter } from "react-router-dom";
 
 const defaultProduct = [{
 
@@ -82,6 +81,7 @@ function App() {
     if (newPage === "productsW" || newPage === "productsM" || newPage === "productsA" || newPage === "productsS" || newPage === "products") {
       fetch(`https://e-commerce-q5ug.onrender.com/products`, {
         method: "POST",
+        credentials: 'include',
         headers: {
           "Content-Type": "application/json",
         },
@@ -202,6 +202,7 @@ function App() {
         
         fetch(`https://e-commerce-q5ug.onrender.com/addbasket`, {
           method: "POST",
+          credentials: 'include',
           headers: {
             "Content-Type": "application/json",
           },
@@ -209,7 +210,7 @@ function App() {
             user : user,
             basket: updatedBasket.map((item) => [item.id, item.quantity, item.details])
           }),
-          credentials: 'include', 
+           
         }).then((res) => res.json())
         .then(console.log)
         return updatedBasket;
@@ -221,6 +222,7 @@ function App() {
         
         fetch(`https://e-commerce-q5ug.onrender.com/addbasket`, {
           method: "POST",
+          credentials: 'include',
           headers: {
             "Content-Type": "application/json",
           },
@@ -228,7 +230,7 @@ function App() {
             user : user,
             basket: updatedBasket.map((item) => [item.id, item.quantity, item.details])
           }),
-          credentials: 'include', 
+         
   
         }).then((res) => res.json())
         .then(console.log)
@@ -242,6 +244,7 @@ function App() {
     setBasket(updatedBasket)
     fetch(`https://e-commerce-q5ug.onrender.com/addbasket`, {
       method: "POST",
+      credentials: 'include',
           headers: {
             "Content-Type": "application/json",
           },
@@ -249,7 +252,7 @@ function App() {
             user : user,    
             basket: updatedBasket.map((item) => [item.id, item.quantity, item.details])
           }),
-          credentials: 'include', 
+           
     }
     
     )
@@ -279,6 +282,7 @@ function App() {
     setBasket(updatedBasket)
     fetch(`https://e-commerce-q5ug.onrender.com/addbasket`, {
       method: "POST",
+      credentials: 'include',
           headers: {
             "Content-Type": "application/json",
           },
@@ -287,7 +291,7 @@ function App() {
             
             basket: updatedBasket.map((item) => [item.id, item.quantity])
           }),
-          credentials: 'include', 
+          
     }
     
     )
