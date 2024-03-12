@@ -10,8 +10,7 @@ const app = express()
 
 app.use(
     cors({
-        origin: "https://e-commerce-1-nxh1.onrender.com",
-        credentials: true
+        credentials: true, origin: true, exposedHeaders: ["Set-Cookie"]
     })
 );
 
