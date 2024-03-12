@@ -8,15 +8,6 @@ const connectRedis = require('connect-redis');
 
 const app = express()
 
-// const db = knex({
-//     client: 'pg',
-//     connection: {
-//         host: '127.0.0.1',
-//         user: 'postgres',
-//         password: 'test',
-//         database: 'shop'
-//     }
-// });
 app.use(
     cors({
         origin: "https://e-commerce-1-nxh1.onrender.com",
@@ -60,6 +51,7 @@ app.use(session({
     secret: "secret",
     resave: false,
     saveUninitialized: false,
+    proxy: true,
     cookie: {
         maxAge: 1000 * 60 * 60 * 24, // 30 days
         secure: false,
