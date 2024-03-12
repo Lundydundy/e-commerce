@@ -167,7 +167,6 @@ app.post("/login", (req, res) => {
                         const user = data[0]
                         req.session.user = user
                         console.log("login user", req.session.user)
-                        req.session.save()
                         if (user.basket.length > 0) {
                             const basketItems = user.basket
                             console.log("basketItems", basketItems)
