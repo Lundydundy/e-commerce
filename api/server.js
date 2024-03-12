@@ -61,7 +61,7 @@ app.use(session({
     saveUninitialized: false,
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 5, // 5 days
-        secure: false,
+        secure: "auto",
         httpOnly: false,
         domain: 'e-commerce-q5ug.onrender.com',
         path: "/",
