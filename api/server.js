@@ -56,11 +56,10 @@ app.use(session({
     secret: "secret",
     resave: false,
     saveUninitialized: false,
-    proxy: true,
     cookie: {
         maxAge: 1000 * 60 * 60 * 24, // 30 days
         secure: false,
-        httpOnly: true
+        httpOnly: false
     }
 
 }))
