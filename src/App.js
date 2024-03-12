@@ -54,6 +54,7 @@ function App() {
       const response = await fetch('https://e-commerce-q5ug.onrender.com/auth', {
         method: "GET",
         mode: "cors",
+        withCredentials: true,
 
         headers: {
           "Content-Type": "application/json",
@@ -85,6 +86,7 @@ function App() {
         method: "POST",
         credentials: 'include',
         mode: "cors",
+        withCredentials: true,
 
         headers: {
           "Content-Type": "application/json",
@@ -135,6 +137,8 @@ function App() {
         const response = await fetch('https://e-commerce-q5ug.onrender.com/logout', {
           method: 'POST',
           mode: "cors",
+          withCredentials: true,
+
           credentials: 'include', // Include credentials (cookies)
           headers: {
             'Content-Type': 'application/json',
@@ -167,6 +171,7 @@ function App() {
       method: 'get',
       credentials: 'include', 
       mode: "cors",
+      withCredentials: true,
 
     })
       .then((res) => res.json())
@@ -210,6 +215,7 @@ function App() {
         fetch(`https://e-commerce-q5ug.onrender.com/addbasket`, {
           method: "POST",
           mode: "cors",
+          withCredentials: true,
 
           credentials: 'include',
           headers: {
@@ -232,6 +238,7 @@ function App() {
         fetch(`https://e-commerce-q5ug.onrender.com/addbasket`, {
           method: "POST",
           mode: "cors",
+          withCredentials: true,
 
           credentials: 'include',
           headers: {
@@ -257,6 +264,7 @@ function App() {
       method: "POST",
       credentials: 'include',
       mode: "cors",
+      withCredentials: true,
 
           headers: {
             "Content-Type": "application/json",
@@ -297,6 +305,7 @@ function App() {
       method: "POST",
       credentials: 'include',
       mode: "cors",
+      withCredentials: true,
 
           headers: {
             "Content-Type": "application/json",
