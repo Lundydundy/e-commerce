@@ -30,8 +30,11 @@ const db = knex({
 
 const RedisStore = connectRedis(session);
 
-const redisClient = redis.createClient("rediss://red-cnnl9sud3nmc73a8sm5g:i9UBL4dxq8NiytW26gTM81E9wZMV8bX0@oregon-redis.render.com:6379")
-
+const redisClient = redis.createClient({
+    url: process.env.REDIS_URL,
+    legacyMode: true
+}
+)
 
 const connection = async () => {
     await redisClient.connect();
