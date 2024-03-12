@@ -53,13 +53,12 @@ process.on('unhandledRejection', (reason, promise) => {
 app.use(session({
     store: new RedisStore({ client: redisClient }),
     secret: "secret",
-    resave: true,
+    resave: false,
     saveUninitialized: false,
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 5, // 5 days
-        secure: true,
+        secure: false,
         httpOnly: false,
-        sameSite: "None",
     }
 
 }))
