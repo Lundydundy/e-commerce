@@ -11,7 +11,8 @@ const app = express()
 
 app.use(
     cors({
-        credentials: true, origin: "https://e-commerce-1-nxh1.onrender.com",
+        credentials: true, 
+        origin: "https://e-commerce-1-nxh1.onrender.com",
         
     })
 );
@@ -61,7 +62,7 @@ app.use(session({
     saveUninitialized: false,
     cookie: {
         maxAge: 1000 * 60 * 60 * 24 * 5, // 5 days
-        secure: true,
+        secure: false,
         httpOnly: false,
     }
 
