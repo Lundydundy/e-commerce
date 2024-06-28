@@ -260,11 +260,7 @@ app.post("/product", (req, res) => {
         .then(data => {
             const products = data["products"]
 
-            const filteredProducts = products.filter(product => {
-                return product.category.includes("sunglasses")
-            })
-
-            filteredProducts.forEach(product => {
+            products.forEach(product => {
                 db('items')
                     .insert({
                         title: product.title,
@@ -283,7 +279,7 @@ app.post("/product", (req, res) => {
                         // Handle success or additional operations if needed
                     })
             })
-            res.json(filteredProducts)
+            res.json(products)
         })
 })
 
