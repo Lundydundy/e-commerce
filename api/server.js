@@ -263,6 +263,7 @@ app.post("/product", (req, res) => {
             products.forEach(product => {
                 db('items')
                     .insert({
+                        id: product.id,
                         title: product.title,
                         description: product.description,
                         category: product.category,
