@@ -76,7 +76,7 @@ const ProductViewPage = ({changeQuantity, changeUser, product, changePage, page,
                                     </div>
                                     <div className="right-content">
                                         <div className="quantity buttons_added">
-                                            <input onClick={() => handleClick("minus")} type="button" value="-" className="minus" /><input type="number" step="1" min="0"
+                                            <input onClick={() => handleClick("minus")} type="button" value="-" className="minus" /><input readOnly={true} type="number" step="1" min="0"
                                                 max="" name="quantity" value={quantity} title="Qty" className="input-text qty text"
                                                 size="4" pattern="" inputMode="" ></input><input onClick={() => handleClick("add")} type="button" value="+" className="plus" />
                                         </div>
